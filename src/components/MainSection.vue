@@ -29,9 +29,9 @@ const cv: string =
     <!-- 左半部 -->
     <div class="flex items-center gap-5 md:w-1/2 order-2 md:order-1">
       <!-- icon 區域 -->
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-3">
         <a v-for="(file, index) in fileLinksArr" :key="index" :href="file.link" target="_blank">
-          <i class="text-2xl" :class="file.icon"></i>
+          <i class="text-3xl" :class="file.icon"></i>
         </a>
       </div>
       <!-- 自我介紹區域 -->

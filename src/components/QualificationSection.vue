@@ -55,7 +55,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
       </div>
 
       <div>
-        <p class="text-xl font-bold">專案佐理研究員 / 網頁設計師</p>
+        <p class="text-xl font-bold">專案佐理研究員 / 專責平面及攝影</p>
         <p class="work-location">國家實驗研究院 - 科技政策研究與資訊中心</p>
         <div class="work-date">
           <i class="ri-calendar-todo-fill text-2xl"></i>
@@ -121,7 +121,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 
 <style scoped>
 .work-container {
-  max-width: 530px;
+  max-width: 575px;
   margin: 2.5rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
