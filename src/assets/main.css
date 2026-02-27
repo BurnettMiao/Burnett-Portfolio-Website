@@ -1,1 +1,12 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-burnett-black: #131e3d;
+  --color-burnett-bg: rgb(249, 250, 251);
+}
+
+body {
+  color: var(--color-burnett-black);
+  font-size: var(--text-lg);
+  background-color: var(--color-burnett-bg);
+}
