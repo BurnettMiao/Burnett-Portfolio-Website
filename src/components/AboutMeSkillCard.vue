@@ -16,7 +16,7 @@ const prop = defineProps<{
     :key="skill.icon"
     class="p-4 rounded-2xl flex flex-col items-center justify-center border border-burnett-black cursor-pointer w-33.75"
   >
-    <i class="text-3xl" :class="skill.icon"></i>
+    <i class="text-3xl mb-2" :class="skill.icon"></i>
     <div>{{ skill.title }}</div>
     <div>{{ skill.text }}</div>
   </div>
