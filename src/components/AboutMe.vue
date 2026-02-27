@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AboutMeSkillCard from '@/components/AboutMeSkillCard.vue'
+import SectionTitle from '@/components/SectionTitle.vue'
 
 interface Skill {
   icon: string
@@ -34,7 +35,10 @@ const skillArr: Skill[] = [
 <template>
   <section class="py-10">
     <div class="text-center font-bold">
-      <span class="text-3xl">關於我</span> <span class="text-2xl ml-3">About Me</span>
+      <SectionTitle>
+        <template v-slot:chineseTitle>關於我</template>
+        <template v-slot:englishTitle>About Me</template>
+      </SectionTitle>
     </div>
 
     <div class="flex flex-col items-center justify-around gap-8 mt-2 md:flex-row">
