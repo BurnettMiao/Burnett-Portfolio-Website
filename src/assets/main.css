@@ -10,7 +10,12 @@
   --color-ts: #3075c1;
   --color-tailwind: #26bcff;
   --color-git: #f44c27;
-  --color-figma: #f44c27;
+  --background-image-figma: linear-gradient(
+    180deg,
+    rgba(242, 78, 30, 1) 0%,
+    rgba(157, 87, 248, 1) 54%,
+    rgba(23, 207, 131, 1) 100%
+  );
 }
 
 body {

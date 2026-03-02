@@ -23,7 +23,7 @@ const webSkills = ref<SkillCategory>({
     { name: 'TypeScript', icon: 'fa-brands fa-typescript', level: 'Basic' },
     { name: 'Tailwind', icon: 'fa-brands fa-tailwind-css', level: 'Intermediate' },
     { name: 'git', icon: 'fa-brands fa-git-alt', level: 'Basic' },
-    { name: 'Figma', icon: 'fa-brands fa-square-figma', level: 'Basic' },
+    { name: 'Figma', icon: 'fa-brands fa-figma', level: 'Basic' },
   ],
 })
 </script>
@@ -40,11 +40,25 @@ const webSkills = ref<SkillCategory>({
         class="mt-10 px-5 flex items-center justify-around flex-wrap gap-x-5 gap-y-10 max-w-235 mx-auto"
       >
         <div
-          class="icon-div flex items-center justify-center gap-1 transition-transform duration-300 hover:cursor-pointer hover:-translate-y-3"
+          class="icon-div flex items-center justify-center gap-1 transition-transform duration-300 hover:cursor-pointer hover:-translate-y-3 group"
           v-for="skill in webSkills.skills"
           :key="skill.name"
         >
-          <i class="text-5xl" :class="skill.icon"></i>
+          <i
+            class="text-5xl"
+            :class="{
+              [skill.icon]: true, // 一定有 icon class
+              'group-hover:text-html': skill.name === 'HTML',
+              'group-hover:text-css': skill.name === 'CSS',
+              'group-hover:text-js': skill.name === 'JavaScript',
+              'group-hover:text-vue': skill.name === 'Vue',
+              'group-hover:text-ts': skill.name === 'TypeScript',
+              'group-hover:text-tailwind': skill.name === 'Tailwind',
+              'group-hover:text-git': skill.name === 'git',
+              'bg-burnett-black group-hover:bg-figma bg-clip-text text-transparent':
+                skill.name === 'Figma',
+            }"
+          ></i>
           <div class="text-left">
             <div class="text-xl">{{ skill.name }}</div>
             <div class="text-sm font-light">{{ skill.level }}</div>
@@ -56,7 +70,7 @@ const webSkills = ref<SkillCategory>({
 </template>
 
 <style scoped>
-.icon-div:hover .fa-html5 {
+/* .icon-div:hover .fa-html5 {
   color: var(--color-html);
 }
 .icon-div:hover .fa-css3-alt {
@@ -77,7 +91,7 @@ const webSkills = ref<SkillCategory>({
 .icon-div:hover .fa-git-alt {
   color: var(--color-git);
 }
-.icon-div:hover .fa-square-js {
-  color: var(--color-css);
-}
+.icon-div:hover .fa-square-figma {
+  color: var(--color-figma);
+} */
 </style>
