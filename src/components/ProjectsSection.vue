@@ -197,7 +197,7 @@ function addShowWebItem() {
     </div>
 
     <!-- 上方 label 按鈕 -->
-    <div class="flex items-center justify-center mt-10 gap-10">
+    <div class="flex flex-wrap items-center justify-center mt-10 gap-x-10 gap-y-5">
       <div
         v-for="label in labels"
         :key="label.title"
@@ -223,7 +223,7 @@ function addShowWebItem() {
             <img class="w-full" :src="web.img" alt="" />
           </div>
           <div
-            class="max-w-60 w-full px-3 pt-1 pb-3 absolute inset-x-0 bottom-0 bg-white/10 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-t-xl"
+            class="max-w-60 w-full px-3 pt-1 pb-3 absolute inset-x-0 bottom-0 bg-white/10 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-t-sm"
           >
             <div class="line-clamp-1 font-bold">
               {{ web.title }}
