@@ -68,30 +68,3 @@ const webSkills = ref<SkillCategory>({
     </div>
   </section>
 </template>
-
-<style scoped>
-/* .icon-div:hover .fa-html5 {
-  color: var(--color-html);
-}
-.icon-div:hover .fa-css3-alt {
-  color: var(--color-css);
-}
-.icon-div:hover .fa-square-js {
-  color: var(--color-js);
-}
-.icon-div:hover .fa-vuejs {
-  color: var(--color-vue);
-}
-.icon-div:hover .fa-typescript {
-  color: var(--color-ts);
-}
-.icon-div:hover .fa-tailwind-css {
-  color: var(--color-tailwind);
-}
-.icon-div:hover .fa-git-alt {
-  color: var(--color-git);
-}
-.icon-div:hover .fa-square-figma {
-  color: var(--color-figma);
-} */
-</style>

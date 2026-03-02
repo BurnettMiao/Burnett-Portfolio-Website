@@ -3,6 +3,7 @@ import MainSection from '@/components/MainSection.vue'
 import AboutMeSection from '@/components/AboutMeSection.vue'
 import QualificationSection from '@/components/QualificationSection.vue'
 import WorkSkillsSection from '@/components/WorkSkillsSection.vue'
+import ProjectsSection from '@/components/ProjectsSection.vue'
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import WorkSkillsSection from '@/components/WorkSkillsSection.vue'
     <AboutMeSection />
     <QualificationSection />
     <WorkSkillsSection />
+    <ProjectsSection />
     <div>作品集主頁重構中...</div>
   </div>
 </template>
