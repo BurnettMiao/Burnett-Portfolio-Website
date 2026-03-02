@@ -3,6 +3,14 @@
 @theme {
   --color-burnett-black: #131e3d;
   --color-burnett-bg: rgb(249, 250, 251);
+  --color-html: #ea6228;
+  --color-css: #29a4d8;
+  --color-js: #f0d91a;
+  --color-vue: #3eb37f;
+  --color-ts: #3075c1;
+  --color-tailwind: #26bcff;
+  --color-git: #f44c27;
+  --color-figma: #f44c27;
 }
 
 body {
