@@ -33,6 +33,14 @@ function closeDesignImg() {
         <div class="max-w-60 cursor-pointer">
           <img :src="poster.img" alt="" loading="lazy" />
         </div>
+
+        <div
+          class="max-w-60 w-full px-3 pt-1 pb-3 absolute inset-x-0 bottom-0 bg-white/50 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-t-sm flex"
+        >
+          <div class="font-bold flex-1 text-outline">
+            {{ poster.title }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

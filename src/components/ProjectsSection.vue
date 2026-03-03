@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import WebProjects from '@/components/WebProjects.vue'
 import DesignProjects from '@/components/DesignProjects.vue'
+import PhotographProjects from '@/components/PhotographProjects.vue'
 
 // 網頁圖片縮圖
 import ASimpleResponsiveLandingPage from '@/assets/images/web/20231108/A-Simple-Responsive-Landing-Page.jpg'
@@ -39,6 +40,24 @@ import YSF2020 from '@/assets/images/design/20230417/20191213_calendar_01.jpg'
 import YSFPodcast from '@/assets/images/design/20230417/Podcast_FB_Thumbnail.jpg'
 import YSFActive from '@/assets/images/design/first/111_YSF_01.jpg'
 import YSFWebinar from '@/assets/images/design/first/111_YSF_Webinar.jpg'
+
+// 攝影縮圖
+import photograph01 from '@/assets/images/photograph/20260303/202601.jpg'
+import photograph02 from '@/assets/images/photograph/20260303/202602.jpg'
+import photograph03 from '@/assets/images/photograph/20260303/202603.jpg'
+import photograph04 from '@/assets/images/photograph/20260303/202604.jpg'
+import photograph05 from '@/assets/images/photograph/20260303/202605.jpg'
+import photograph06 from '@/assets/images/photograph/20260303/202606.jpg'
+import photograph07 from '@/assets/images/photograph/20260303/202607.jpg'
+import photograph08 from '@/assets/images/photograph/20260303/202608.jpg'
+import photograph09 from '@/assets/images/photograph/20260303/202609.jpg'
+import photograph10 from '@/assets/images/photograph/20260303/202610.jpg'
+import photograph11 from '@/assets/images/photograph/20260303/202611.jpg'
+import photograph12 from '@/assets/images/photograph/20260303/202612.jpg'
+import photograph13 from '@/assets/images/photograph/20260303/202613.jpg'
+import photograph14 from '@/assets/images/photograph/20260303/202614.jpg'
+import photograph15 from '@/assets/images/photograph/20260303/202615.jpg'
+import photograph16 from '@/assets/images/photograph/20260303/202616.jpg'
 
 interface LabelItem {
   icon: string
@@ -202,6 +221,25 @@ const designProjects = ref<DesignProjectsItem[]>([
   { img: YSFWebinar, title: 'YSF Webinar' },
 ])
 
+const photographs = ref<string[]>([
+  photograph01,
+  photograph02,
+  photograph03,
+  photograph04,
+  photograph05,
+  photograph06,
+  photograph07,
+  photograph08,
+  photograph09,
+  photograph10,
+  photograph11,
+  photograph12,
+  photograph13,
+  photograph14,
+  photograph15,
+  photograph16,
+])
+
 const currentLabel = ref<string>('Web')
 
 function changeCurrentLabel(label: string) {
@@ -237,6 +275,8 @@ function changeCurrentLabel(label: string) {
     <WebProjects v-if="currentLabel === 'Web'" :webProjects="webProjects" />
     <!-- Design Projects -->
     <DesignProjects v-if="currentLabel === 'Design'" :designProjects="designProjects" />
+    <!-- PhotographProjects -->
+    <PhotographProjects v-if="currentLabel === 'Photograph'" :photographs="photographs" />
   </section>
 </template>
 
