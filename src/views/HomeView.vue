@@ -13,6 +13,5 @@ import ProjectsSection from '@/components/ProjectsSection.vue'
     <QualificationSection />
     <WorkSkillsSection />
     <ProjectsSection />
-    <div>作品集主頁重構中...</div>
   </div>
 </template>

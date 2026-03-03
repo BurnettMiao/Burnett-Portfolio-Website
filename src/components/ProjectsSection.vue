@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import SectionTitle from '@/components/SectionTitle.vue'
+import WebProjects from '@/components/WebProjects.vue'
+import DesignProjects from '@/components/DesignProjects.vue'
 
 // 網頁圖片縮圖
 import ASimpleResponsiveLandingPage from '@/assets/images/web/20231108/A-Simple-Responsive-Landing-Page.jpg'
@@ -29,8 +31,28 @@ import NewsHomepage from '@/assets/images/web/first/news-homepage-main.jpg'
 import YSF from '@/assets/images/web/first/YSFxWorld.jpg'
 import YSFOfficePage from '@/assets/images/web/first/YSF.jpg'
 
+// 設計圖片縮圖
+import YSFInternational from '@/assets/images/design/20230417/20190523_0814-15YSF.jpg'
+import YSFxNCKU from '@/assets/images/design/20230417/20191023_NCKUxYSF.jpg'
+import YSFEndOfYearParty from '@/assets/images/design/20230417/Poster_01-1.jpg'
+import YSF2020 from '@/assets/images/design/20230417/20191213_calendar_01.jpg'
+import YSFPodcast from '@/assets/images/design/20230417/Podcast_FB_Thumbnail.jpg'
+import YSFActive from '@/assets/images/design/first/111_YSF_01.jpg'
+import YSFWebinar from '@/assets/images/design/first/111_YSF_Webinar.jpg'
+
 interface LabelItem {
   icon: string
+  title: string
+}
+
+interface WebProjectsItem {
+  img: string
+  title: string
+  link: string
+}
+
+interface DesignProjectsItem {
+  img: string
   title: string
 }
 
@@ -40,7 +62,7 @@ const labels = ref<LabelItem[]>([
   { icon: 'fa-solid fa-images', title: 'Photograph' },
 ])
 
-const webProjects = ref([
+const webProjects = ref<WebProjectsItem[]>([
   {
     img: ASimpleResponsiveLandingPage,
     title: 'A Simple Responsive Landing Page',
@@ -170,20 +192,20 @@ const webProjects = ref([
   // },
 ])
 
+const designProjects = ref<DesignProjectsItem[]>([
+  { img: YSFInternational, title: 'YSF 國際交流會議' },
+  { img: YSFxNCKU, title: 'YSF x NCKU 跨領域年輕學者論壇' },
+  { img: YSFEndOfYearParty, title: 'YSF 歲末交流活動' },
+  { img: YSF2020, title: 'YSF 2020桌曆' },
+  { img: YSFPodcast, title: 'YSF Podcast' },
+  { img: YSFActive, title: 'YSF 學術交流活動' },
+  { img: YSFWebinar, title: 'YSF Webinar' },
+])
+
 const currentLabel = ref<string>('Web')
-const showWebItem = ref<number>(8)
 
 function changeCurrentLabel(label: string) {
   currentLabel.value = label
-}
-
-function addShowWebItem() {
-  if (showWebItem.value < webProjects.value.length) {
-    showWebItem.value += 4
-    return
-  }
-
-  return
 }
 </script>
 
@@ -211,39 +233,10 @@ function addShowWebItem() {
     </div>
 
     <!-- 下方切換對應頁面 -->
-    <!-- Web -->
-    <div class="mt-8">
-      <div class="flex flex-wrap items-center justify-center gap-8">
-        <div
-          class="flex flex-col items-center justify-center gap-2 border border-gray-300 rounded-xl overflow-hidden cursor-pointer hover:shadow-md relative group"
-          v-for="web in webProjects.slice(0, showWebItem)"
-          :key="web.title"
-        >
-          <div class="max-w-60">
-            <img class="w-full" :src="web.img" alt="" />
-          </div>
-          <div
-            class="max-w-60 w-full px-3 pt-1 pb-3 absolute inset-x-0 bottom-0 bg-white/10 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-t-sm"
-          >
-            <div class="line-clamp-1 font-bold">
-              {{ web.title }}
-            </div>
-            <a :href="web.link" target="_blank" class="text-amber-300">
-              View Page <i class="fa-solid fa-up-right-from-square"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="flex items-center justify-center mt-10">
-        <div
-          v-if="showWebItem < webProjects.length"
-          @click="addShowWebItem"
-          class="px-5 py-3 rounded-xl bg-amber-300 cursor-pointer"
-        >
-          SHOW MORE
-        </div>
-      </div>
-    </div>
+    <!-- Web Projects -->
+    <WebProjects v-if="currentLabel === 'Web'" :webProjects="webProjects" />
+    <!-- Design Projects -->
+    <DesignProjects v-if="currentLabel === 'Design'" :designProjects="designProjects" />
   </section>
 </template>
 
