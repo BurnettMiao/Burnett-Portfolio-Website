@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 
 interface SkillItem {
   icon: string
-  level: string
+  level: number
   name: string
 }
 
@@ -16,14 +16,14 @@ interface SkillCategory {
 const webSkills = ref<SkillCategory>({
   title: '前端技能',
   skills: [
-    { name: 'HTML', icon: 'fa-brands fa-html5', level: 'Intermediate' },
-    { name: 'CSS', icon: 'fa-brands fa-css3-alt', level: 'Intermediate' },
-    { name: 'JavaScript', icon: 'fa-brands fa-square-js', level: 'Intermediate' },
-    { name: 'Vue', icon: 'fa-brands fa-vuejs', level: 'Intermediate' },
-    { name: 'TypeScript', icon: 'fa-brands fa-typescript', level: 'Basic' },
-    { name: 'Tailwind', icon: 'fa-brands fa-tailwind-css', level: 'Intermediate' },
-    { name: 'git', icon: 'fa-brands fa-git-alt', level: 'Basic' },
-    { name: 'Figma', icon: 'fa-brands fa-figma', level: 'Basic' },
+    { name: 'HTML', icon: 'fa-brands fa-html5', level: 4 },
+    { name: 'CSS', icon: 'fa-brands fa-css3-alt', level: 4 },
+    { name: 'JavaScript', icon: 'fa-brands fa-square-js', level: 4 },
+    { name: 'Vue', icon: 'fa-brands fa-vuejs', level: 4 },
+    { name: 'TypeScript', icon: 'fa-brands fa-typescript', level: 3 },
+    { name: 'Tailwind', icon: 'fa-brands fa-tailwind-css', level: 4 },
+    { name: 'git', icon: 'fa-brands fa-git-alt', level: 3 },
+    { name: 'Figma', icon: 'fa-brands fa-figma', level: 3 },
   ],
 })
 </script>
@@ -61,7 +61,14 @@ const webSkills = ref<SkillCategory>({
           ></i>
           <div class="text-left">
             <div class="text-xl">{{ skill.name }}</div>
-            <div class="text-sm font-light">{{ skill.level }}</div>
+            <div>
+              <i
+                v-for="n in 5"
+                :key="n"
+                class="group-hover:text-amber-300 text-[12px]"
+                :class="n <= skill.level ? 'fa-solid fa-star' : 'fa-regular fa-star'"
+              ></i>
+            </div>
           </div>
         </div>
       </div>
