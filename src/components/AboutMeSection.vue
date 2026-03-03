@@ -46,7 +46,7 @@ const skillArr: Skill[] = [
         <img class="w-70 rounded-2xl" src="../assets/images/Miao-1.jpeg" alt="" />
       </div>
 
-      <div class="w-full md:w-2/3 p-4">
+      <div class="w-full md:w-2/3 px-2 sm:p-4">
         <div>
           個人畢業於國立臺南大學動畫媒體設計研究所，平時喜愛爬山踏青接近大自然，對於攝影也有所涉獵。我擁有設計與動畫的技術背景，目前臺灣大多公司多以Vue來開發專案，因此我在前端三大框架中也選擇Vue來作為學習目標，目前常應用前端框架Vue，並使用Vue建立自己的Side
           Project，從實作中建立起對Vue的深入瞭解。我對於Tailwind CSS也有所著墨，具有使用Tailwind

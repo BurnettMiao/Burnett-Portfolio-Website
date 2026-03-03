@@ -37,10 +37,10 @@ const webSkills = ref<SkillCategory>({
       </SectionTitle>
 
       <div
-        class="mt-10 px-5 flex items-center justify-around flex-wrap gap-x-5 gap-y-10 max-w-235 mx-auto"
+        class="mt-10 px-0 sm:px-5 flex items-center justify-around flex-wrap gap-x-5 gap-y-10 max-w-235 mx-auto"
       >
         <div
-          class="icon-div flex items-center justify-center gap-1 transition-transform duration-300 hover:cursor-pointer hover:-translate-y-3 group min-w-40"
+          class="icon-div flex items-center justify-center gap-1 transition-transform duration-300 hover:cursor-pointer hover:-translate-y-3 group"
           v-for="skill in webSkills.skills"
           :key="skill.name"
         >
