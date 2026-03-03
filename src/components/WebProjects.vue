@@ -50,7 +50,7 @@ function addShowWebItem() {
       <div
         v-if="showWebItem < webProjects.length"
         @click="addShowWebItem"
-        class="px-5 py-3 rounded-xl bg-amber-300 cursor-pointer"
+        class="px-5 py-3 rounded-xl bg-amber-300 cursor-pointer shadow-lg hover:shadow-none transition-all duration-200 ease-in-out hover:-translate-y-1"
       >
         SHOW MORE
       </div>

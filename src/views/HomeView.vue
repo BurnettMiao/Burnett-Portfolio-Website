@@ -9,9 +9,9 @@ import ProjectsSection from '@/components/ProjectsSection.vue'
 <template>
   <div class="max-w-7xl mx-auto p-5">
     <MainSection />
-    <AboutMeSection />
+    <AboutMeSection id="about-me" />
     <QualificationSection />
-    <WorkSkillsSection />
-    <ProjectsSection />
+    <WorkSkillsSection id="work-skills" />
+    <ProjectsSection id="work-projects" />
   </div>
 </template>

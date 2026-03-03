@@ -1,22 +1,46 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const navItems = ref<string[]>(['關於我', '工作技能', '作品集'])
+interface NavItem {
+  label: string
+  id: string
+}
+
+const navItems = ref<NavItem[]>([
+  { label: '關於我', id: 'about-me' },
+  { label: '工作技能', id: 'work-skills' },
+  { label: '作品集', id: 'work-projects' },
+])
 const isOpen = ref<boolean>(false)
 
 function toggleOpen() {
   isOpen.value = !isOpen.value
 }
+
+function scrollToSection(id: string) {
+  const element = document.getElementById(id)
+
+  if (element) {
+    const navbarHeight = 70
+    const y = element.getBoundingClientRect().top + window.scrollY - navbarHeight
+    window.scrollTo({ top: y, behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
-  <div class="w-full p-5 bg-amber-300 border-b border-gray-300 shadow-sm">
+  <div class="w-full p-5 border-b border-gray-300 shadow-sm fixed top-0 left-0 bg-burnett-bg z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="text-[22px] font-bold">Burnett's portfolio</div>
 
       <div class="hidden sm:flex items-center gap-5">
-        <div class="relative nav-item hover:cursor-pointer" v-for="item in navItems" :key="item">
-          {{ item }}
+        <div
+          @click="scrollToSection(item.id)"
+          class="relative nav-item hover:cursor-pointer"
+          v-for="item in navItems"
+          :key="item.id"
+        >
+          {{ item.label }}
         </div>
       </div>
 
