@@ -25,7 +25,7 @@ const cv: string =
 </script>
 
 <template>
-  <section class="flex flex-col md:flex-row items-center justify-around gap-8 mt-2 pb-10 sm:mt-6">
+  <section class="flex flex-col md:flex-row items-center justify-around gap-8 mt-25 pb-10 sm:mt-27">
     <!-- 左半部 -->
     <div class="flex items-center gap-5 md:w-1/2 order-2 md:order-1">
       <!-- icon 區域 -->
