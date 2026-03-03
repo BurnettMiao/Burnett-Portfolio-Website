@@ -25,6 +25,8 @@ function scrollToSection(id: string) {
     const y = element.getBoundingClientRect().top + window.scrollY - navbarHeight
     window.scrollTo({ top: y, behavior: 'smooth' })
   }
+
+  isOpen.value = false
 }
 </script>
 
@@ -33,10 +35,13 @@ function scrollToSection(id: string) {
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="text-[22px] font-bold">Burnett's portfolio</div>
 
-      <div class="hidden sm:flex items-center gap-5">
+      <div
+        class="fixed flex flex-col inset-x-0 top-18.5 bg-burnett-bg py-10 text-center sm:static sm:py-0 items-center gap-5 border-b border-gray-300 transition-all duration-300 ease-in-out z-40 sm:border-b-0 sm:bg-none sm:flex-row sm:translate-0"
+        :class="[isOpen ? 'translate-x-0' : '-translate-x-full']"
+      >
         <div
           @click="scrollToSection(item.id)"
-          class="relative nav-item hover:cursor-pointer"
+          class="relative w-auto nav-item hover:cursor-pointer"
           v-for="item in navItems"
           :key="item.id"
         >
@@ -47,16 +52,17 @@ function scrollToSection(id: string) {
       <i
         v-if="isOpen"
         @click="toggleOpen"
-        class="ri-menu-line cursor-pointer text-2xl sm:hidden"
-      ></i>
-
-      <i
-        v-else
-        @click="toggleOpen"
         class="ri-close-large-line cursor-pointer text-2xl sm:hidden"
       ></i>
+
+      <i v-else @click="toggleOpen" class="ri-menu-line cursor-pointer text-2xl sm:hidden"></i>
     </div>
   </div>
+
+  <div
+    class="block sm:hidden fixed inset-0 bg-gray-200/40 backdrop-blur-sm z-40"
+    :class="[isOpen ? 'translate-x-0' : '-translate-full']"
+  ></div>
 </template>
 
 <style scoped>
