@@ -42,7 +42,9 @@ function closeDesignImg() {
     v-if="showDesignImg"
     class="bg-gray-300/30 backdrop-blur-sm fixed inset-0 z-20 flex items-center justify-center"
   >
-    <div class="h-[90%] max-w-275 max-auto relative">
+    <div
+      class="h-auto max-h-[90%] sm:h-[90%] w-auto max-w-[90%] sm:max-w-275 flex items-center justify-center relative"
+    >
       <img
         v-if="currentImg"
         class="h-full w-auto max-w-full object-contain"
