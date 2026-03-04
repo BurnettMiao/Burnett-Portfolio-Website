@@ -48,7 +48,7 @@ function closeDesignImg() {
       <div
         v-if="showImgItem < props.photographs.length"
         @click="addShowImgItem"
-        class="px-5 py-3 rounded-xl bg-amber-300 cursor-pointer shadow-lg hover:shadow-none transition-all duration-200 ease-in-out hover:-translate-y-1"
+        class="px-5 py-3 rounded-xl bg-burnett-blue text-white cursor-pointer shadow-lg hover:shadow-none transition-all duration-200 ease-in-out hover:-translate-y-1"
       >
         SHOW MORE
       </div>

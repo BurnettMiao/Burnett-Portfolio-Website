@@ -49,14 +49,17 @@ const cv: string =
         </div>
 
         <div>
-          因工作需求誤打誤撞意外發現對於前端網頁有興趣的奇怪人物，想用網頁傳達出非平面設計所能營造出的另一種視覺互動感受之體驗
+          具設計背景的前端工程師，現負責企業內部學習平台開發，專注於 Vue 與元件化設計。熟悉 Tailwind
+          CSS、RWD 與 Figma 協作，擅長在設計與工程之間取得平衡。作品可參閱 GitHub。
         </div>
 
-        <div
+        <a
+          href="https://docs.google.com/document/d/1qbcKyAgez-Nh6bHPtWTPscqEG5JIeXz-YI0F6XWLDM8/edit?usp=sharing"
+          target="_blank"
           class="inline-block px-4 py-2 border border-burnett-black bg-burnett-black text-white rounded-lg cursor-pointer hover:bg-white hover:text-burnett-black transition-colors ease duration-300"
         >
           Download CV
-        </div>
+        </a>
       </div>
     </div>
 

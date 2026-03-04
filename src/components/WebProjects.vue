@@ -40,7 +40,7 @@ function addShowWebItem() {
           <div class="line-clamp-1 font-bold flex-1 text-outline">
             {{ web.title }}
           </div>
-          <div class="text-amber-300">
+          <div class="text-burnett-blue">
             <i class="fa-solid fa-up-right-from-square"></i>
           </div>
         </div>
@@ -50,7 +50,7 @@ function addShowWebItem() {
       <div
         v-if="showWebItem < webProjects.length"
         @click="addShowWebItem"
-        class="px-5 py-3 rounded-xl bg-amber-300 cursor-pointer shadow-lg hover:shadow-none transition-all duration-200 ease-in-out hover:-translate-y-1"
+        class="px-5 py-3 rounded-xl bg-burnett-blue text-white cursor-pointer shadow-lg hover:shadow-none transition-all duration-200 ease-in-out hover:-translate-y-1"
       >
         SHOW MORE
       </div>
