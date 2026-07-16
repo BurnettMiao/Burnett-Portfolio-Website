@@ -13,8 +13,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: '/Burnett-Portfolio-Website/',
-  build: {
-    outDir: 'docs',
-  },
+  // 以下 github page 使用
+  // base: '/Burnett-Portfolio-Website/',
+  // build: {
+  //   outDir: 'docs',
+  // },
 })
